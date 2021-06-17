@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "scan",
+      "script": "./schedule.js",
+      "instances": "1",
+      "watch": false,
+      "error_file": "./logs/pm2_err.log",
+      "max_memory_restart": "200M",
+      "min_uptime": "5s",
+      "out_file": "/dev/null",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
