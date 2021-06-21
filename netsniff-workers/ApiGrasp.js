@@ -2,6 +2,7 @@ const axios = require('axios')
 const Grasp = require('./Grasp')
 
 class ApiGrasp extends Grasp {
+  static name = 'api'
   constructor(checkConfig) {
     super(checkConfig)
     this.checkConfig = checkConfig

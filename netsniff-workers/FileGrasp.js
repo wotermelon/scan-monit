@@ -2,6 +2,7 @@ const axios = require('axios')
 const Grasp = require('./Grasp')
 
 class FileGrasp extends Grasp {
+  static name = 'file'
   constructor(checkConfig) {
     super(checkConfig)
   }

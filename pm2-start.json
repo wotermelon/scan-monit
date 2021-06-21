@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "scan",
+      "name": "scan-monit",
       "script": "./schedule.js",
       "instances": "1",
       "watch": false,

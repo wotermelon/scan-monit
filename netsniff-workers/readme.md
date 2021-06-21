@@ -6,6 +6,9 @@
 const Grasp = require('./Grasp')
 
 class CustomGrasp extends Grasp {
+  // name 为 config/setting.js 配置中的 graspType
+  static name = 'custom'
+  
   constructor(checkConfig) {
     // 必须
     super(checkConfig)
@@ -49,20 +52,4 @@ class CustomGrasp extends Grasp {
 }
 
 module.exports = CustomGrasp
-```
-
-### 增加类型
-
-> netsniff-workers/index.js
-
-```js
-// key 为 config/setting.js 配置中的 graspType
-// value 为 CustomGrasp 类
-const graspMap = {
-  api: apiGrasp,
-  puppeteer: PuppeteerGrasp,
-  file: FileGrasp,
-  // 自定义
-  custom: CustomGrasp
-}
 ```

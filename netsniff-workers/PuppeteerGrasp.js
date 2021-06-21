@@ -9,6 +9,7 @@ const dayjs = require('dayjs')
 // # This installs Chrome on any RHEL / CentOS / Amazon Linux variant.
 // curl https://intoli.com/install-google-chrome.sh | bash
 class PuppeteerGrasp extends Grasp {
+  static name = 'puppeteer'
   constructor(checkConfig) {
     super(checkConfig)
     this.checkConfigHash = md5(checkConfig.url)

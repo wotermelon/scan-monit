@@ -1,14 +1,20 @@
 const workerpool = require('workerpool')
-const apiGrasp = require('./ApiGrasp')
-const PuppeteerGrasp = require('./PuppeteerGrasp')
-const FileGrasp = require('./FileGrasp')
+const requireContext = require('@wotermelon/require-context')
+const GraspCtors = requireContext(__dirname, true, /\.js$/)
 
-const graspMap = {
-  api: apiGrasp,
-  puppeteer: PuppeteerGrasp,
-  file: FileGrasp
-}
-  
+// {
+//   api: apiGrasp,
+//   puppeteer: PuppeteerGrasp,
+//   file: FileGrasp
+// }
+const graspMap = Object.keys(GraspCtors)
+  .filter(filename => filename !== 'index.js' && filename !== 'Grasp.js')
+  .reduce((objMap, key) => {
+    const item = GraspCtors[key]
+    objMap[item.name] = item
+    return objMap
+  }, {})
+
 async function bootstrap (checkConfig, index, count) {
   const log = (cat, text, type = 'log') => console[type](`[${index + 1}/${count}]${cat}`, checkConfig.title, text || '')
   log('启动')

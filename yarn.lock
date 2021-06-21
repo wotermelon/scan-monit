@@ -23,6 +23,11 @@
   dependencies:
     "@types/node" "*"
 
+"@wotermelon/require-context@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@wotermelon/require-context/-/require-context-1.0.0.tgz#20a10effdd9bf591e273bdde5e2730e6c91243fa"
+  integrity sha512-xLYsrZRLdzs/NN49ZIl9vZn8klQuSFImJLbr56QG1w8znfzg+Idofly42Hxgo+csLE9z83ZhM9j7SNxyr2TmgQ==
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.nlark.com/agent-base/download/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"

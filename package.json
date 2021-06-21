@@ -9,6 +9,7 @@
   "author": "wotermelon",
   "license": "ISC",
   "dependencies": {
+    "@wotermelon/require-context": "^1.0.0",
     "axios": "^0.21.1",
     "dayjs": "^1.10.5",
     "fs-extra": "9.0.0",
